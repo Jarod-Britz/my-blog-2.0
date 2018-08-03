@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Post</title>
+    <link rel="stylesheet" href="../stylesheets/master.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
+    <link rel="stylesheet" href="../stylesheets/master.css">
+    <link rel="stylesheet" href="../stylesheets/new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  
+
+        <nav>
+                <logo>
+                    <img src="../images/logo.jpg" height="60">
+                </logo>
+        
+                <ul>
+                    <li>
+                        <a href="/index"><i class="fa fa-home fa-fw"></i>Home</a>
+                    </li>
+                    <li>
+                        <a href="/new"><i class="fa fa-pencil fa-fw"></i>New</a>
+                    </li>
+                    <li>
+                        <a href="/contact"><i class="fa fa-phone fa-fw"></i>Contact</a>
+                    </li>
+                    <li>
+                        <a href="/"><i class="fa fa-unlock-alt fa-fw"></i>Sign Out</a>
+                    </li>
+                </ul>
+            </nav>
+    
+
+
+        <div class="container formContainer">
+
+        <form method="post" action="/new">
+            <div>
+            <label for="Title">Title</label>
+            <br>
+            <input type="text" placeholder="title" id="Title" name="title">
+        </div>
+
+                <div>
+                    <label for="Author">Author</label>
+                    <br>
+                    <input type="text" placeholder="username" id="Author" name="author">
+
+                </div>
+
+              
+
+                <div>
+                    <label for="datetime">Date-time</label>
+                    <br>
+                    <input type="text" placeholder="datetime" id="Title" name="timeDate">
+                </div>
+
+                <div>
+                    <label for="content">Content</label>
+                    <textarea id="summernote" name="content"></textarea>
+
+                </div>
+
+                <button class="btn btn-default navbar-btn">POST</button>
+            </form>
+        </div>
+
+        <script>
+                $(document).ready(function () {
+                    $('#summernote').summernote({
+                        height: 200
+                    });
+                });
+            </script>
+
+</body>
+
+</html> 

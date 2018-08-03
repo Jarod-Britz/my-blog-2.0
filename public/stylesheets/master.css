@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    height: 70px;
+    /*border: 1px solid black;*/
+    position: sticky;
+    top: 0;
+    background-color: white;
+  
+  }
+  
+  nav button{
+    padding: 0;
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+    border: none;
+  }
+  nav logo{
+    line-height: 30px;
+    text-align: right;
+    margin-right: 10px;
+    color: lawngreen;  
+  }
+  
+  
+  
+  /*Mobile view for nav links*/
+  nav ul{
+    grid-column: 1/3;
+    text-align: center;
+    list-style-type: none;
+       position: absolute;
+       
+    top: 70px;
+    width: 100%;
+    height: 1000px;
+    display: none;
+  }
+  nav ul li{
+    margin:20px 0;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding:10px 50%;
+  }
+  nav ul li a:hover{
+    background-color: #ccc;
+  }
+  
+  .articleContainer .article{
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  
+  /*Mobile view for guest article*/
+  .guestArticle{
+     padding:0 2%;
+     width: 96%;
+  }
+  
+  .guestArticle *{
+    margin-bottom: 5px;
+  }
+  
+  
+  
+  
+    
+  /*Responsive for tablet*/
+  @media screen and (min-width: 650px){
+    nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr 4fr;
+    }
+  
+    nav ul{
+        position: relative;
+        top:0;
+        height: 30px;
+        grid-column: 3/4;
+  
+        list-style-type: none;
+    }
+  
+    nav ul li{
+        display: inline;
+        /*margin:20px 0;*/
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: black;
+        /*padding:10px 50%;*/
+        padding: 10px 20px;;
+        line-height: 70px;
+    }
+    nav ul li a:hover{
+        background-color: #ccc;
+        transition: 1s ease-in-out;
+    }
+  
+   
+  }
+  
+  /*Responsive for desktop*/
+  @media screen and (min-width: 1000px){
+    nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr 4fr;
+        height: 70px;
+    }
+    nav logo{
+        line-height: 70px;
+        font-size: 30px;
+    }
+    nav button{
+        /*display: none;*/
+        width: 30px;
+        height: 30px;
+        margin:20px;
+        /* line-height: 70px; */
+    }
+    nav ul{
+        display: block;
+    }
+  
+    nav ul li a{
+        line-height: 70px;
+        font-size: 20px; 
+        display: visible;
+        color: black;
+    }
+
+  }
+  
+  

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+body{
+  background-image: url("../images/bground.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Abel', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* overflow-x: hidden; */
+}
+
+/* site wide buttons */
+button{
+  padding: 3px 16px;
+  font-size: 20px;
+  background-color: grey;
+  color:black;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+a{
+  text-decoration: none;
+}
+nav{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  height: 30px;
+  border: 1px solid black;
+  position: sticky;
+  top: 0;
+  background-color: white;
+
+}
+
+nav button{
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+nav logo{
+  line-height: 30px;
+  text-align: right;
+  margin-right: 10px;
+  color: lawngreen;  
+}
+
+p{
+  background-color: white;
+}
+
+fieldset{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  background-color: white;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
+  
+}
+
+
+
+.articleContainer .article{
+  margin-top: 5%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  text-align: center;
+}
+.articleContainer .article button a{
+  color: black;
+}
+.articleContainer .article button:hover{
+  background-color: darkgrey;
+}
+.articleContainer .article img{
+  width: 300px;
+  
+}
+
+.articleContainer .article{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/*Mobile view for guest article*/
+.guestArticle{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+   width: 100%;
+   text-align: center;
+}
+.guestArticle button{
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+.guestArticle button a{
+  color: black;
+}
+.guestArticle button:hover{
+  background-color: darkgray;
+}
+.guestArticle img{
+  display: block;
+  margin: 0 auto;
+}
+
+.guestArticle *{
+  margin-bottom: 5%;
+}
+
+
+
+/*Responsive for tablet*/
+@media screen and (min-width: 650px){
+  .articleContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px;
+    width: 100px;
+} 
+
+.guestArticle figure img{
+    margin: 0;
+    padding: 0;
+    width: 80%;
+
+}
+
+}
+
+  /*Responsive for desktop*/
+  @media screen and (min-width: 1000px){
+    
+    .articleContainer{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap:10px;
+      margin: 0 10%;
+      width: 80%;
+  } 
+
+  /*Desktop view for guest article*/
+  .guestArticle{
+      /* border: 1px solid black; */
+       width: 60%;
+       padding:40px 20%;
+  }
+  .guestArticle *{
+      text-align: left;
+  }
+
+  .guestArticle p{
+    
+      font-size: 22px;
+      text-align: left;
+      
+  }
+
+
+
+  }
+
+
+  
+
+
+
+
+/*Styling for the footer*/
+footer{
+  background-color: black;
+  color: white;
+  padding: 5px;
+  text-align: center;
+
+}
+

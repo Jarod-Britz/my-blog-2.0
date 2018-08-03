@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+body{
+  background-image: url("../images/bground.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Abel', sans-serif;
+  text-align: center;
+}
+
+fieldset{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+    background-color: white;
+}
+p{
+    font-size: 20px;
+    text-align: left;
+}
+button{
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 5%;
+    border-radius: 12px;
+}

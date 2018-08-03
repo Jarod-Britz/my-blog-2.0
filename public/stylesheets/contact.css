@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+body{
+  background-image: url("../images/bground.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Abel', sans-serif;
+}
+
+
+h1 {
+    margin-left: 5%; 
+    margin-top: 5%;
+    color: white;
+}
+h2{
+    margin-left: 5%; 
+    color: white;
+}
+  
+  .contact_section {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    margin-left: 5%;
+    margin-right: 5%; 
+}
+    .contact_section .sendAMessage {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 10px; 
+    }
+      .contact_section .sendAMessage input {
+        font-size: 20px;
+        height: 40px;
+     }
+      .contact_section .sendAMessage textarea {
+        grid-column: 1/4;
+        font-size: 20px; 
+    }
+      .contact_section .sendAMessage button {
+        width: 150px;
+        height: 40px;
+        background-color: darkgrey;
+        color: white;
+        font-size: 17px;
+        border-radius: 5px; 
+    }
+      .contact_section .sendAMessage button:hover {
+        background-color: darkgrey; 
+    }
+    .contact_section .logo img{
+        width: 400px;
+        display: block;
+        margin: 0 auto;
+    }

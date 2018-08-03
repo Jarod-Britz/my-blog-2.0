@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Blog website</title>
+    <meta charset="windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../javascripts/jquery-3.3.1.min.js"></script>
+    <script src="../javascripts/script.js"></script>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/master.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+
+    <nav>
+        <logo>
+            <img src="../images/logo.jpg" height="70">
+        </logo>
+
+        <ul>
+            <li>
+                <a href="/index"><i class="fa fa-home fa-fw"></i>Home</a>
+            </li>
+            <li>
+                <a href="/new"><i class="fa fa-pencil fa-fw"></i>New</a>
+            </li>
+            <li>
+                <a href="/contact"><i class="fa fa-phone fa-fw"></i>Contact</a>
+            </li>
+            <li>
+                <a href="/"><i class="fa fa-unlock-alt fa-fw"></i>Sign Out</a>
+            </li>
+        </ul>
+    </nav>
+    <fieldset>
+        <div class="container">
+
+            <section class="guestArticle">
+                <% if (posts) { %>
+                    <h1>
+                        <%- posts[0].title %>
+                    </h1>
+
+
+
+
+
+                    <p>
+                        <%- posts[0].content.substring(0, 200); %>...
+                    </p>
+                    <h2>By
+                        <%- posts[0].author %>
+                    </h2>
+
+                    <img src="<%= posts[0].img %>">
+                    <button>
+                        <a href="/<%= posts[0].id %>">Read more</a>
+                    </button>
+                    
+                    <button>
+                        <a href="/edit/<%= posts[0].id %>">Edit</a>
+                    </button>
+
+                    <button>
+                        <a href="/delete/<%= posts[0].id %>">Delete</a>
+                    </button>
+
+
+
+                    <% } %>
+            </section>
+
+            <hr>
+
+            <div class="articleContainer">
+
+
+                <% if (posts) { %>
+                    <% posts.forEach(function(post){ %>
+
+                        <section class="article articel1">
+
+                            <h1>
+                                <%- post.title %>
+                            </h1>
+
+                            <img src="<%= post.img %>">
+                            <br>
+
+                            <%- post.content.substring(0, 150); %>...
+                                <br>
+
+
+                                <h2>Author:
+                                    <%- post.author %>
+                                </h2>
+
+                                <button>
+                                    <a href="/<%= post.id %>">Read More</a>
+                                </button>
+                                <button>
+                                <a href="/update/<%= post.id %>">Edit</a>
+                                </button>
+                                <button id="btnDelete" type="submit">
+                                <a href="/delete/<%= post.id %>" javascript:location.reload(true)>Delete</a>
+                                </button>
+
+                        </section>
+
+                        <% }); %>
+                            <% } %>
+
+            </div>
+        </div>
+    </fieldset>
+
+
+    <script>
+        $(document).ready(function(){
+            $('#btnDelete').on('click', function(){
+                alert("Are you sure you want to delete post?")
+            });
+        });
+
+
+        function refreshPage(){
+            window.location.reload();
+        } 
+
+    </script>
+</body>
+
+</html>
